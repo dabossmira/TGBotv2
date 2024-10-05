@@ -1,3 +1,4 @@
+from dotenv import load_dotenv
 import os
 import logging
 import smtplib
@@ -9,6 +10,9 @@ from telegram.ext import ConversationHandler
 import asyncio
 import websockets
 import json
+
+# Explicitly load the .env file
+load_dotenv()
 
 # File where user settings will be saved
 USER_DATA_FILE = "user_data.json"
